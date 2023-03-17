@@ -14,11 +14,15 @@ import reputation from '../data/06-reputation.csv';
 import lover from '../data/07-lover.csv';
 import folklore from '../data/08-folklore.csv';
 import evermore from '../data/09-evermore.csv';
+import default_data from '../data/word-tree-default.json';
 
-function WordFrequency() {
+let words = []
+function WordTree() {
   const [loading, setLoading] = useState(true);
+  // const [words, setWords] = useState([]);
+
   const [word1, setWord1] = useState('');
-  const [word2, setWord2] = useState('');
+  const [word2, setWord2] = useState('love');
   const [second, setSecond] = useState(false);
   const [lyrics, setLyrics] = useState({
     "debut": [],
@@ -31,30 +35,8 @@ function WordFrequency() {
     "folklore": [],
     "evermore": []
   })
-  const [data, setData] = useState([
-    ["Album", "Word Frequency"],
-    ["Taylor Swift", 0],
-    ["Fearless", 0],
-    ["Speak Now", 0],
-    ["Red", 0],
-    ["1989", 0],
-    ["reputation", 0],
-    ["lover", 0],
-    ["folklore", 0],
-    ["evermore", 0],
-  ]);
-  const [data2, setData2] = useState([
-    ["Album", "Word Frequency"],
-    ["Taylor Swift", 0],
-    ["Fearless", 0],
-    ["Speak Now", 0],
-    ["Red", 0],
-    ["1989", 0],
-    ["reputation", 0],
-    ["lover", 0],
-    ["folklore", 0],
-    ["evermore", 0],
-  ]);
+  const [phrases, setPhrases] = useState(default_data);
+
   const [lyricRes, setLyricsRes] = useState([]);
 
   const handleFormValues = (name, value) => {
@@ -64,7 +46,7 @@ function WordFrequency() {
   };
 
   const options = {
-    chartArea: { width: "50%" },
+    chartArea: { width: "50%", 'height': '90%' },
     hAxis: {
       title: "Word Frequency",
       minValue: 0,
@@ -77,7 +59,6 @@ function WordFrequency() {
   useEffect(() => {
     setLoading(true);
     if (lyrics["debut"].length === 0) {
-      console.log("hi")
       Papa.parse(TaylorSwiftAlbum, {
         header: true,
         download: true,
@@ -167,90 +148,80 @@ function WordFrequency() {
         },
       });
     }
+    // console.log(handleLyricSubmit("love"));
     setLoading(false);
 
     if (!loading) {
       // console.log(lyrics)
+      // handleLyricSubmit("love");
       //console.log(handleLyricSubmit("love"))
+      
     }
+    
 
-  })
+  }, [])
 
-  const handleLyricSubmit = (word, changeData) => {
+  const handleLyricSubmit = (word) => {
     word = word.toLowerCase();
-    let tempRes = [
-      ["Album", "Word Frequency"],
-      ["Taylor Swift", 0],
-      ["Fearless", 0],
-      ["Speak Now", 0],
-      ["Red", 0],
-      ["1989", 0],
-      ["reputation", 0],
-      ["lover", 0],
-      ["folklore", 0],
-      ["evermore", 0],
-    ];
-    let indices = {
-      "Taylor Swift": 1,
-      "Fearless (Taylor’s Version)": 2,
-      "Speak Now (Deluxe)": 3,
-      "Red (Deluxe Edition)": 4,
-      "1989 (Deluxe)": 5,
-      "reputation": 6,
-      "Lover": 7,
-      "folklore (deluxe version)": 8,
-      "evermore (deluxe version)": 9
-    }
+    const re = new RegExp("\\b" + word + "\\b");
+
     if (!loading) {
       Object.keys(lyrics).map(function (album) {
         lyrics[album].map((l, i) => {
           let cur = l["lyric"].replace(/[^a-zA-Z ]/g, "").toLowerCase()
-          if (cur.includes(" " + word + " ") || cur.includes(" " + word)) {tempRes[indices[l["album_name"]]][1]++; console.log(l)};
+          // if (cur.includes(" " + word + " ") || cur.includes(" " + word)) {
+          if (cur.search(re) !== -1) {
+            setPhrases((preValues) => [...preValues, [cur]]);
+          };
         })
       });
-      changeData(tempRes)
     }
   }
 
+  const options_wordtree = {
+    wordtree: {
+      format: "implicit",
+      type: "double",
+      word: word2,
+    },
+  };
+
   return (
     <div>
-      <FormGroup>
-        <FormControlLabel control={<Checkbox checked={second} onChange={() => { setSecond(!second); console.log(second) }} />} label="Enable second comparison graph" />
-      </FormGroup>
-      <Grid container direction="row" >
-        <Grid item md={5}>
-          <Typography><i>Search for a word here</i></Typography>
-          <TextField size='small' sx={{ marginRight: "16px" }} onChange={(e) => setWord1(e.target.value)}></TextField>
-          <Button variant="contained" onClick={() => handleLyricSubmit(word1, setData)}>Search</Button>
-          {/* <div style={{width: "100%", height: "100%", border: "1px solid", marginTop: "16px", borderRadius: "8px"}}> */}
-          <Chart
-            chartType="BarChart"
-            width="100%"
-            height="400px"
-            data={data}
-            options={options}
-          />
-          {/* </div> */}
-        </Grid>
-        <Grid item md={1}/>
-        {second &&
-          <Grid item md={5}>
-            <Typography><i>Search for a word here</i></Typography>
-            <TextField size='small' sx={{ marginRight: "16px" }} onChange={(e) => setWord2(e.target.value)}></TextField>
-            <Button variant="contained" onClick={() => handleLyricSubmit(word2, setData2)}>Search</Button>
-            <Chart
-              chartType="BarChart"
-              width="100%"
-              height="400px"
-              data={data2}
-              options={options}
-            />
-          </Grid>
-        }
+      <Grid container direction="row" justifyContent='center' alignItems='center'>
+        {/* <Grid item md={12} justifyContent='center'> */}
+        <Typography><i>Search for a word here</i></Typography>
+        <TextField size='small' sx={{ marginRight: "16px", marginLeft: "16px" }} onChange={(e) => { setWord1(e.target.value); }}></TextField>
+        <Button variant="contained" sx={{ marginRight: "16px" }} onClick={() => {
+          // setWords([word1]);
+          words.push(word1);
+          setPhrases([["Phrases"]]);
+          handleLyricSubmit(word1);
+          setWord2(word1);
+        }}>
+          Search
+        </Button>
+        <Button variant="outlined" onClick={() => {
+          setPhrases([["Phrases"]]);
+          setWord2('');
+        }}>
+          Reset
+        </Button>
+        <div style={{marginTop: "8px"}}>
+        <Chart
+          chartType="WordTree"
+          width="100%"
+          height="500px"
+          data={phrases}
+          options={options_wordtree}
+        />
+        {console.log(phrases)}
+        </div>
+        {/* </Grid> */}
       </Grid>
 
     </div>
   )
 }
 
-export default WordFrequency;
+export default WordTree;

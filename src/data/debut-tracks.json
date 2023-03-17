@@ -1,0 +1,11 @@
+[
+  [
+    "Album",
+    "Acousticness",
+    "Danceability",
+    "Energy",
+    "Valence",
+    "Relative Loudness"
+  ],
+  ["Tim McGray", 0.1830, 0.5453, 0.6643, 0.4265, 0.85632184]
+]

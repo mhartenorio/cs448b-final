@@ -1,9 +1,12 @@
 import React from 'react';
 import BarChart from './components/BarChart';
 import './App.css';
-import { Grid, Container } from '@mui/material';
+import { Grid, Container, Typography } from '@mui/material';
 import WordFrequency from './components/WordFrequency';
 import LineChart from './components/LineChart';
+import LineBarChart from './components/LineBarChart';
+import WordFrequencyV2 from './components/WordFrequencyV2';
+import WordTree from './components/WordTree';
 
 const data = [
   { album: "Taylor Swift", critic_score: 67 },
@@ -20,14 +23,46 @@ const data = [
 
 function App() {
   return (
-    <div className="App">
-
-      <Container maxWidth='md' sx={{padding: "36px"}}>
+    <div style={{ marginTop: "36px" }}>
+      <Container maxWidth='md'>
+        <Typography variant="h4">Part I: Audio Analysis</Typography>
+      </Container>
+      <Container maxWidth='md' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Audio Features of Each Album</Typography>
+        {/* <Typography textAlign='center'>Averaged across the songs in each album</Typography> */}
+        <br />
         <LineChart />
       </Container>
-      <Grid justifyContent='center' sx={{display: "block", margin: "0 auto", width: "500px"}}>
-        <WordFrequency/>
-      </Grid>
+      <Container maxWidth='lg' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Trends in Audio Features vs. Critic Scores</Typography>
+        <Typography textAlign='center'>Features averaged across the songs in each album</Typography>
+        <br />
+        <LineBarChart />
+      </Container>
+      <Container maxWidth='md'>
+        <Typography variant="h4">Part II: Sentiment Analysis</Typography>
+      </Container>
+      <Container maxWidth='md'>
+        <Typography variant="h4">Part III: Lexical Analysis</Typography>
+      </Container>
+      <Container maxWidth='lg' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Lexical Diversity</Typography>
+        <Typography textAlign='center'>The ratio of number of unique words to the total number of words</Typography>
+        <br />
+        <div>hi</div>
+      </Container>
+      <Container maxWidth='lg' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Word Appearances per Album</Typography>
+        <Typography textAlign='center'>Number of times the word appears in each album</Typography>
+        <br />
+        <WordFrequencyV2 />
+      </Container>
+      <Container maxWidth='lg' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Word Tree</Typography>
+        <Typography textAlign='center'>How does Taylor Swift write about love?</Typography>
+        <br />
+        <WordTree />
+      </Container>
     </div>
   );
 }

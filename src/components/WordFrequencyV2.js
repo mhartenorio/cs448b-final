@@ -15,8 +15,12 @@ import lover from '../data/07-lover.csv';
 import folklore from '../data/08-folklore.csv';
 import evermore from '../data/09-evermore.csv';
 
-function WordFrequency() {
+
+let words = []
+function WordFrequencyV2() {
   const [loading, setLoading] = useState(true);
+  // const [words, setWords] = useState([]);
+
   const [word1, setWord1] = useState('');
   const [word2, setWord2] = useState('');
   const [second, setSecond] = useState(false);
@@ -43,18 +47,8 @@ function WordFrequency() {
     ["folklore", 0],
     ["evermore", 0],
   ]);
-  const [data2, setData2] = useState([
-    ["Album", "Word Frequency"],
-    ["Taylor Swift", 0],
-    ["Fearless", 0],
-    ["Speak Now", 0],
-    ["Red", 0],
-    ["1989", 0],
-    ["reputation", 0],
-    ["lover", 0],
-    ["folklore", 0],
-    ["evermore", 0],
-  ]);
+  const [phrases, setPhrases] = useState([["Phrases"]])
+
   const [lyricRes, setLyricsRes] = useState([]);
 
   const handleFormValues = (name, value) => {
@@ -64,7 +58,7 @@ function WordFrequency() {
   };
 
   const options = {
-    chartArea: { width: "50%" },
+    chartArea: { width: "50%", 'height': '90%' },
     hAxis: {
       title: "Word Frequency",
       minValue: 0,
@@ -77,7 +71,6 @@ function WordFrequency() {
   useEffect(() => {
     setLoading(true);
     if (lyrics["debut"].length === 0) {
-      console.log("hi")
       Papa.parse(TaylorSwiftAlbum, {
         header: true,
         download: true,
@@ -178,18 +171,22 @@ function WordFrequency() {
 
   const handleLyricSubmit = (word, changeData) => {
     word = word.toLowerCase();
-    let tempRes = [
-      ["Album", "Word Frequency"],
-      ["Taylor Swift", 0],
-      ["Fearless", 0],
-      ["Speak Now", 0],
-      ["Red", 0],
-      ["1989", 0],
-      ["reputation", 0],
-      ["lover", 0],
-      ["folklore", 0],
-      ["evermore", 0],
-    ];
+    let tempRes = [...data];
+    let word_index = words.indexOf(word);
+    const re = new RegExp("\\b" + word + "\\b");
+
+    if (word_index !== 0) {
+      tempRes.map((a, idx) => {
+        if (idx === 0) {
+          a.push(word)
+        } else {
+          a.push(0)
+        }
+      })
+    } else {
+      tempRes[0][1] = word;
+    }
+    console.log(tempRes)
     let indices = {
       "Taylor Swift": 1,
       "Fearless (Taylor’s Version)": 2,
@@ -205,52 +202,67 @@ function WordFrequency() {
       Object.keys(lyrics).map(function (album) {
         lyrics[album].map((l, i) => {
           let cur = l["lyric"].replace(/[^a-zA-Z ]/g, "").toLowerCase()
-          if (cur.includes(" " + word + " ") || cur.includes(" " + word)) {tempRes[indices[l["album_name"]]][1]++; console.log(l)};
+          // if (cur.includes(" " + word + " ") || cur.includes(" " + word)) {
+          if (cur.search(re) !== -1) {
+            tempRes[indices[l["album_name"]]][word_index + 1]++;
+            // setPhrases((preValues) => [...preValues, [cur]]);
+          };
         })
       });
       changeData(tempRes)
     }
   }
 
+  const options_wordtree = {
+    wordtree: {
+      format: "implicit",
+      word: word1,
+    },
+  };
+
   return (
     <div>
-      <FormGroup>
-        <FormControlLabel control={<Checkbox checked={second} onChange={() => { setSecond(!second); console.log(second) }} />} label="Enable second comparison graph" />
-      </FormGroup>
-      <Grid container direction="row" >
-        <Grid item md={5}>
-          <Typography><i>Search for a word here</i></Typography>
-          <TextField size='small' sx={{ marginRight: "16px" }} onChange={(e) => setWord1(e.target.value)}></TextField>
-          <Button variant="contained" onClick={() => handleLyricSubmit(word1, setData)}>Search</Button>
-          {/* <div style={{width: "100%", height: "100%", border: "1px solid", marginTop: "16px", borderRadius: "8px"}}> */}
-          <Chart
-            chartType="BarChart"
-            width="100%"
-            height="400px"
-            data={data}
-            options={options}
-          />
-          {/* </div> */}
-        </Grid>
-        <Grid item md={1}/>
-        {second &&
-          <Grid item md={5}>
-            <Typography><i>Search for a word here</i></Typography>
-            <TextField size='small' sx={{ marginRight: "16px" }} onChange={(e) => setWord2(e.target.value)}></TextField>
-            <Button variant="contained" onClick={() => handleLyricSubmit(word2, setData2)}>Search</Button>
-            <Chart
-              chartType="BarChart"
-              width="100%"
-              height="400px"
-              data={data2}
-              options={options}
-            />
-          </Grid>
-        }
+      <Grid container direction="row" justifyContent='center' alignItems='center'>
+        {/* <Grid item md={12} justifyContent='center'> */}
+        <Typography><i>Search for a word here</i></Typography>
+        <TextField size='small' sx={{ marginRight: "16px", marginLeft: "16px" }} onChange={(e) => { setWord1(e.target.value); }}></TextField>
+        <Button variant="contained" sx={{ marginRight: "16px" }} onClick={() => {
+          // setWords([word1]);
+          words.push(word1);
+          setPhrases([["Phrases"]]);
+          handleLyricSubmit(word1, setData)
+        }}>
+          Search
+        </Button>
+        <Button variant="outlined" onClick={() => {
+          setPhrases([["Phrases"]]);
+          setData([
+            ["Album", "Word Frequency"],
+            ["Taylor Swift", 0],
+            ["Fearless", 0],
+            ["Speak Now", 0],
+            ["Red", 0],
+            ["1989", 0],
+            ["reputation", 0],
+            ["lover", 0],
+            ["folklore", 0],
+            ["evermore", 0],]);
+          words = []
+        }}>
+          Reset
+        </Button>
+        <Chart
+          chartType="BarChart"
+          width="100%"
+          height="600px"
+          data={data}
+          options={options}
+        />
+        {/* </Grid> */}
       </Grid>
 
     </div>
   )
 }
 
-export default WordFrequency;
+export default WordFrequencyV2;

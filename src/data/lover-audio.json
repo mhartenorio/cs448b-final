@@ -1,0 +1,135 @@
+[
+  [
+    "Album",
+    "Acousticness",
+    "Danceability",
+    "Energy",
+    "Valence"
+  ],
+  [
+    "I Forgot That You Existed",
+    0.298,
+    0.664,
+    0.316,
+    0.541
+  ],
+  [
+    "Cruel Summer",
+    0.117,
+    0.552,
+    0.702,
+    0.564
+  ],
+  [
+    "Lover",
+    0.492,
+    0.359,
+    0.543,
+    0.453
+  ],
+  [
+    "The Man",
+    0.0767,
+    0.777,
+    0.658,
+    0.633
+  ],
+  [
+    "The Archer",
+    0.12,
+    0.292,
+    0.574,
+    0.166
+  ],
+  [
+    "I Think He Knows",
+    0.00889,
+    0.897,
+    0.366,
+    0.416
+  ],
+  [
+    "Miss Americana & The Heartbreak Prince",
+    0.028,
+    0.662,
+    0.747,
+    0.487
+  ],
+  [
+    "Paper Rings",
+    0.0129,
+    0.811,
+    0.719,
+    0.865
+  ],
+  [
+    "Cornelia Street",
+    0.781,
+    0.824,
+    0.624,
+    0.248
+  ],
+  [
+    "Death By A Thousand Cuts",
+    0.454,
+    0.712,
+    0.732,
+    0.313
+  ],
+  [
+    "London Boy",
+    0.0246,
+    0.695,
+    0.71,
+    0.557
+  ],
+  [
+    "Soon You’ll Get Better (feat. The Chicks)",
+    0.907,
+    0.433,
+    0.182,
+    0.421
+  ],
+  [
+    "False God",
+    0.736,
+    0.739,
+    0.32,
+    0.351
+  ],
+  [
+    "You Need To Calm Down",
+    0.00929,
+    0.771,
+    0.671,
+    0.714
+  ],
+  [
+    "Afterglow",
+    0.13,
+    0.756,
+    0.449,
+    0.399
+  ],
+  [
+    "ME! (feat. Brendon Urie of Panic! At The Disco)",
+    0.033,
+    0.61,
+    0.83,
+    0.728
+  ],
+  [
+    "It’s Nice To Have A Friend",
+    0.971,
+    0.737,
+    0.175,
+    0.545
+  ],
+  [
+    "Daylight",
+    0.808,
+    0.557,
+    0.496,
+    0.265
+  ]
+]

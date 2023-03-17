@@ -1,0 +1,106 @@
+[
+  ["Album", "Acousticness", "Danceability", "Energy", "Valence"
+  ],
+  ["willow",
+    0.833,
+    0.392,
+    0.574,
+    0.529
+  ],
+  ["champagne problems",
+    0.92,
+    0.462,
+    0.24,
+    0.32
+  ],
+  ["gold rush",
+    0.83,
+    0.512,
+    0.462,
+    0.353
+  ],
+  ["'tis the damn season",
+    0.735,
+    0.575,
+    0.434,
+    0.348
+  ],
+  ["tolerate it",
+    0.878,
+    0.316,
+    0.361,
+    0.221
+  ],
+  ["no body, no crime (feat. HAIM)",
+    0.418,
+    0.546,
+    0.613,
+    0.535
+  ],
+  ["happiness",
+    0.87,
+    0.559,
+    0.334,
+    0.211
+  ],
+  ["dorothea",
+    0.696,
+    0.605,
+    0.488,
+    0.354
+  ],
+  ["coney island (feat. The National)",
+    0.819,
+    0.537,
+    0.537,
+    0.292
+  ],
+  ["ivy",
+    0.855,
+    0.515,
+    0.545,
+    0.535
+  ],
+  ["cowboy like me",
+    0.768,
+    0.604,
+    0.517,
+    0.511
+  ],
+  ["long story short",
+    0.66,
+    0.546,
+    0.73,
+    0.573
+  ],
+  ["marjorie",
+    0.876,
+    0.535,
+    0.561,
+    0.287
+  ],
+  ["closure",
+    0.835,
+    0.689,
+    0.704,
+    0.92
+  ],
+  ["evermore (feat. Bon Iver)",
+    0.937,
+    0.39,
+    0.27,
+    0.32
+  ],
+  ["right where you left me - bonus track",
+    0.769,
+    0.581,
+    0.619,
+    0.645
+  ],
+  ["it's time to go - bonus track",
+    0.801,
+    0.592,
+    0.41,
+    0.416
+  ]
+]
