@@ -27,7 +27,7 @@ function App() {
       <Container maxWidth='md'>
         <Typography variant="h4">Part I: Audio Analysis</Typography>
       </Container>
-      <Container maxWidth='md' sx={{ padding: "36px" }}>
+      <Container maxWidth='lg' sx={{ padding: "36px" }}>
         <Typography textAlign='center'>Audio Features of Each Album</Typography>
         {/* <Typography textAlign='center'>Averaged across the songs in each album</Typography> */}
         <br />

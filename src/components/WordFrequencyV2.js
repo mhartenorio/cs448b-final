@@ -58,7 +58,8 @@ function WordFrequencyV2() {
   };
 
   const options = {
-    chartArea: { width: "50%", 'height': '90%' },
+    // chartArea: { width: "50%", 'height': '90%' },
+    
     hAxis: {
       title: "Word Frequency",
       minValue: 0,
@@ -254,7 +255,7 @@ function WordFrequencyV2() {
         <Chart
           chartType="BarChart"
           width="100%"
-          height="600px"
+          height="620px"
           data={data}
           options={options}
         />

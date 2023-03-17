@@ -55,6 +55,7 @@ const LineChart = () => {
     chart: {
       lineWidth: 10,
     },
+    // theme: 'material',
     // hAxis: { slantedText:true, slantedTextAngle:90 }
   };
 
@@ -100,7 +101,7 @@ const LineChart = () => {
       </Box>
       <br/>
       <Chart
-        chartType="Line"
+        chartType="LineChart"
         data={data[album]}
         options={options}
         width="100%"

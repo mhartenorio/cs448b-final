@@ -191,7 +191,7 @@ function WordTree() {
       <Grid container direction="row" justifyContent='center' alignItems='center'>
         {/* <Grid item md={12} justifyContent='center'> */}
         <Typography><i>Search for a word here</i></Typography>
-        <TextField size='small' sx={{ marginRight: "16px", marginLeft: "16px" }} onChange={(e) => { setWord1(e.target.value); }}></TextField>
+        <TextField size='small' sx={{ marginRight: "16px", marginLeft: "16px" }} onChange={(e) => { setWord1(e.target.value); }} value={word1}></TextField>
         <Button variant="contained" sx={{ marginRight: "16px" }} onClick={() => {
           // setWords([word1]);
           words.push(word1);
@@ -202,8 +202,9 @@ function WordTree() {
           Search
         </Button>
         <Button variant="outlined" onClick={() => {
-          setPhrases([["Phrases"]]);
-          setWord2('');
+          setPhrases(default_data);
+          setWord2('love');
+          setWord1('');
         }}>
           Reset
         </Button>
