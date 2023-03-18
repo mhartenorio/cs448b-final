@@ -21,7 +21,7 @@ function WordTree() {
   const [loading, setLoading] = useState(true);
   // const [words, setWords] = useState([]);
 
-  const [word1, setWord1] = useState('');
+  const [word1, setWord1] = useState('love');
   const [word2, setWord2] = useState('love');
   const [second, setSecond] = useState(false);
   const [lyrics, setLyrics] = useState({

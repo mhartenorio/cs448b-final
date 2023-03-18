@@ -101,7 +101,7 @@ const LineChart = () => {
       </Box>
       <br/>
       <Chart
-        chartType="LineChart"
+        chartType="Line"
         data={data[album]}
         options={options}
         width="100%"
