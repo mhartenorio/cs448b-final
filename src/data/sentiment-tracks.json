@@ -1,0 +1,916 @@
+[
+  [
+    "Track",
+    "Sad",
+    "Happy",
+    "Album"
+  ],
+  [
+    "Tim McGraw",
+    0.22,
+    0.22,
+    "Taylor Swift"
+  ],
+  [
+    "Picture To Burn",
+    0.57,
+    0.13,
+    "Taylor Swift"
+  ],
+  [
+    "Teardrops On My Guitar",
+    0.33,
+    0.24,
+    "Taylor Swift"
+  ],
+  [
+    "A Place In This World",
+    0.16,
+    0.2,
+    "Taylor Swift"
+  ],
+  [
+    "Cold As You",
+    0.25,
+    0.17,
+    "Taylor Swift"
+  ],
+  [
+    "The Outside",
+    0.62,
+    0.0,
+    "Taylor Swift"
+  ],
+  [
+    "Tied Together With A Smile",
+    0.4,
+    0.23,
+    "Taylor Swift"
+  ],
+  [
+    "Stay Beautiful",
+    0.06,
+    0.43,
+    "Taylor Swift"
+  ],
+  [
+    "Should’ve Said No",
+    0.29,
+    0.14,
+    "Taylor Swift"
+  ],
+  [
+    "Mary’s Song (Oh My My My)",
+    0.19,
+    0.48,
+    "Taylor Swift"
+  ],
+  [
+    "Our Song",
+    0.51,
+    0.03,
+    "Taylor Swift"
+  ],
+  [
+    "I’m Only Me When I’m with You",
+    0.3,
+    0.0,
+    "Taylor Swift"
+  ],
+  [
+    "Invisible",
+    0.28,
+    0.32,
+    "Taylor Swift"
+  ],
+  [
+    "A Perfectly Good Heart",
+    0.68,
+    0.07,
+    "Taylor Swift"
+  ],
+  [
+    "Teardrops on My Guitar (Pop Version)",
+    0.33,
+    0.24,
+    "Taylor Swift"
+  ],
+  [
+    "Fearless",
+    0.39,
+    0.04,
+    "Fearless"
+  ],
+  [
+    "Fifteen",
+    0.19,
+    0.22,
+    "Fearless"
+  ],
+  [
+    "Love Story",
+    0.26,
+    0.26,
+    "Fearless"
+  ],
+  [
+    "Hey Stephen",
+    0.28,
+    0.07,
+    "Fearless"
+  ],
+  [
+    "White Horse",
+    0.45,
+    0.1,
+    "Fearless"
+  ],
+  [
+    "You Belong With Me",
+    0.17,
+    0.45,
+    "Fearless"
+  ],
+  [
+    "Breathe",
+    0.33,
+    0.07,
+    "Fearless"
+  ],
+  [
+    "Tell Me Why",
+    0.44,
+    0.08,
+    "Fearless"
+  ],
+  [
+    "You’re Not Sorry",
+    0.53,
+    0.09,
+    "Fearless"
+  ],
+  [
+    "The Way I Loved You",
+    0.21,
+    0.44,
+    "Fearless"
+  ],
+  [
+    "Forever & Always",
+    0.5,
+    0.11,
+    "Fearless"
+  ],
+  [
+    "The Best Day",
+    0.33,
+    0.23,
+    "Fearless"
+  ],
+  [
+    "Change",
+    0.24,
+    0.02,
+    "Fearless"
+  ],
+  [
+    "Jump Then Fall",
+    0.11,
+    0.18,
+    "Fearless"
+  ],
+  [
+    "Untouchable",
+    0.27,
+    0.32,
+    "Fearless"
+  ],
+  [
+    "Forever & Always (Piano Version)",
+    0.5,
+    0.11,
+    "Fearless"
+  ],
+  [
+    "Come In With the Rain",
+    0.59,
+    0.0,
+    "Fearless"
+  ],
+  [
+    "Superstar",
+    0.05,
+    0.24,
+    "Fearless"
+  ],
+  [
+    "The Other Side of the Door",
+    0.12,
+    0.23,
+    "Fearless"
+  ],
+  [
+    "Today Was a Fairytale",
+    0.24,
+    0.21,
+    "Fearless"
+  ],
+  [
+    "Mine",
+    0.57,
+    0.04,
+    "Speak Now"
+  ],
+  [
+    "Sparks Fly",
+    0.15,
+    0.33,
+    "Speak Now"
+  ],
+  [
+    "Back to December",
+    0.25,
+    0.23,
+    "Speak Now"
+  ],
+  [
+    "Speak Now",
+    0.02,
+    0.15,
+    "Speak Now"
+  ],
+  [
+    "Dear John",
+    0.28,
+    0.11,
+    "Speak Now"
+  ],
+  [
+    "Mean",
+    0.32,
+    0.04,
+    "Speak Now"
+  ],
+  [
+    "The Story of Us",
+    0.23,
+    0.09,
+    "Speak Now"
+  ],
+  [
+    "Never Grow Up",
+    0.33,
+    0.07,
+    "Speak Now"
+  ],
+  [
+    "Enchanted",
+    0.16,
+    0.28,
+    "Speak Now"
+  ],
+  [
+    "Better Than Revenge",
+    0.26,
+    0.09,
+    "Speak Now"
+  ],
+  [
+    "Innocent",
+    0.35,
+    0.19,
+    "Speak Now"
+  ],
+  [
+    "Haunted",
+    0.24,
+    0.03,
+    "Speak Now"
+  ],
+  [
+    "Last Kiss",
+    0.2,
+    0.18,
+    "Speak Now"
+  ],
+  [
+    "Long Live",
+    0.2,
+    0.06,
+    "Speak Now"
+  ],
+  [
+    "Ours",
+    0.3,
+    0.21,
+    "Speak Now"
+  ],
+  [
+    "If This Was a Movie",
+    0.32,
+    0.12,
+    "Speak Now"
+  ],
+  [
+    "Superman",
+    0.09,
+    0.25,
+    "Speak Now"
+  ],
+  [
+    "State of Grace",
+    0.33,
+    0.17,
+    "Red"
+  ],
+  [
+    "Red",
+    0.24,
+    0.12,
+    "Red"
+  ],
+  [
+    "Treacherous",
+    0.36,
+    0.02,
+    "Red"
+  ],
+  [
+    "I Knew You Were Trouble",
+    0.63,
+    0.03,
+    "Red"
+  ],
+  [
+    "All Too Well",
+    0.42,
+    0.13,
+    "Red"
+  ],
+  [
+    "22",
+    0.3,
+    0.19,
+    "Red"
+  ],
+  [
+    "I Almost Do",
+    0.23,
+    0.0,
+    "Red"
+  ],
+  [
+    "We Are Never Ever Getting Back Together",
+    0.32,
+    0.39,
+    "Red"
+  ],
+  [
+    "Stay Stay Stay",
+    0.03,
+    0.14,
+    "Red"
+  ],
+  [
+    "The Last Time",
+    0.5,
+    0.0,
+    "Red"
+  ],
+  [
+    "Holy Ground",
+    0.22,
+    0.11,
+    "Red"
+  ],
+  [
+    "Sad Beautiful Tragic",
+    0.24,
+    0.35,
+    "Red"
+  ],
+  [
+    "The Lucky One",
+    0.12,
+    0.59,
+    "Red"
+  ],
+  [
+    "Everything Has Changed",
+    0.54,
+    0.11,
+    "Red"
+  ],
+  [
+    "Starlight",
+    0.28,
+    0.04,
+    "Red"
+  ],
+  [
+    "Begin Again",
+    0.26,
+    0.19,
+    "Red"
+  ],
+  [
+    "The Moment I Knew",
+    0.32,
+    0.26,
+    "Red"
+  ],
+  [
+    "Come Back... Be Here",
+    0.59,
+    0.11,
+    "Red"
+  ],
+  [
+    "Girl at Home",
+    0.43,
+    0.09,
+    "Red"
+  ],
+  [
+    "Treacherous (Original Demo Recording)",
+    0.36,
+    0.02,
+    "Red"
+  ],
+  [
+    "Red (Original Demo Recording)",
+    0.43,
+    0.17,
+    "Red"
+  ],
+  [
+    "State of Grace (Acoustic Version)",
+    0.34,
+    0.14,
+    "Red"
+  ],
+  [
+    "Welcome to New York",
+    0.06,
+    0.57,
+    "1989"
+  ],
+  [
+    "Blank Space",
+    0.17,
+    0.17,
+    "1989"
+  ],
+  [
+    "Style",
+    0.12,
+    0.02,
+    "1989"
+  ],
+  [
+    "Out of the Woods",
+    0.39,
+    0.01,
+    "1989"
+  ],
+  [
+    "All You Had to Do Was Stay",
+    0.11,
+    0.03,
+    "1989"
+  ],
+  [
+    "Shake It Off",
+    0.48,
+    0.04,
+    "1989"
+  ],
+  [
+    "I Wish You Would",
+    0.33,
+    0.07,
+    "1989"
+  ],
+  [
+    "Bad Blood",
+    0.34,
+    0.13,
+    "1989"
+  ],
+  [
+    "Wildest Dreams",
+    0.04,
+    0.25,
+    "1989"
+  ],
+  [
+    "How You Get the Girl",
+    0.23,
+    0.0,
+    "1989"
+  ],
+  [
+    "This Love",
+    0.13,
+    0.75,
+    "1989"
+  ],
+  [
+    "I Know Places",
+    0.26,
+    0.09,
+    "1989"
+  ],
+  [
+    "Clean",
+    0.34,
+    0.0,
+    "1989"
+  ],
+  [
+    "Wonderland",
+    0.49,
+    0.12,
+    "1989"
+  ],
+  [
+    "You Are in Love",
+    0.35,
+    0.24,
+    "1989"
+  ],
+  [
+    "New Romantics",
+    0.13,
+    0.43,
+    "1989"
+  ],
+  [
+    "...Ready for It?",
+    0.31,
+    0.24,
+    "reputation"
+  ],
+  [
+    "End Game",
+    0.54,
+    0.07,
+    "reputation"
+  ],
+  [
+    "I Did Something Bad",
+    0.3,
+    0.2,
+    "reputation"
+  ],
+  [
+    "Don’t Blame Me",
+    0.24,
+    0.14,
+    "reputation"
+  ],
+  [
+    "Delicate",
+    0.63,
+    0.17,
+    "reputation"
+  ],
+  [
+    "Look What You Made Me Do",
+    0.57,
+    0.03,
+    "reputation"
+  ],
+  [
+    "So It Goes...",
+    0.26,
+    0.03,
+    "reputation"
+  ],
+  [
+    "Gorgeous",
+    0.49,
+    0.29,
+    "reputation"
+  ],
+  [
+    "Getaway Car",
+    0.33,
+    0.04,
+    "reputation"
+  ],
+  [
+    "King of My Heart",
+    0.12,
+    0.03,
+    "reputation"
+  ],
+  [
+    "Dancing with Our Hands Tied",
+    0.18,
+    0.14,
+    "reputation"
+  ],
+  [
+    "Dress",
+    0.24,
+    0.21,
+    "reputation"
+  ],
+  [
+    "This Is Why We Can’t Have Nice Things",
+    0.22,
+    0.28,
+    "reputation"
+  ],
+  [
+    "Call It What You Want",
+    0.24,
+    0.18,
+    "reputation"
+  ],
+  [
+    "New Year’s Day",
+    0.18,
+    0.09,
+    "reputation"
+  ],
+  [
+    "I Forgot That You Existed",
+    0.27,
+    0.29,
+    "Lover"
+  ],
+  [
+    "Cruel Summer",
+    0.23,
+    0.21,
+    "Lover"
+  ],
+  [
+    "Lover",
+    0.31,
+    0.24,
+    "Lover"
+  ],
+  [
+    "The Man",
+    0.28,
+    0.03,
+    "Lover"
+  ],
+  [
+    "The Archer",
+    0.27,
+    0.14,
+    "Lover"
+  ],
+  [
+    "I Think He Knows",
+    0.28,
+    0.34,
+    "Lover"
+  ],
+  [
+    "Miss Americana & The Heartbreak Prince",
+    0.53,
+    0.05,
+    "Lover"
+  ],
+  [
+    "Paper Rings",
+    0.34,
+    0.09,
+    "Lover"
+  ],
+  [
+    "Cornelia Street",
+    0.52,
+    0.02,
+    "Lover"
+  ],
+  [
+    "Death by a Thousand Cuts",
+    0.33,
+    0.16,
+    "Lover"
+  ],
+  [
+    "London Boy",
+    0.27,
+    0.3,
+    "Lover"
+  ],
+  [
+    "Soon You’ll Get Better",
+    0.38,
+    0.08,
+    "Lover"
+  ],
+  [
+    "False God",
+    0.13,
+    0.36,
+    "Lover"
+  ],
+  [
+    "You Need To Calm Down",
+    0.27,
+    0.4,
+    "Lover"
+  ],
+  [
+    "Afterglow",
+    0.54,
+    0.07,
+    "Lover"
+  ],
+  [
+    "ME!",
+    0.38,
+    0.32,
+    "Lover"
+  ],
+  [
+    "It’s Nice to Have a Friend",
+    0.17,
+    0.39,
+    "Lover"
+  ],
+  [
+    "Daylight",
+    0.38,
+    0.14,
+    "Lover"
+  ],
+  [
+    "the 1",
+    0.16,
+    0.19,
+    "folklore"
+  ],
+  [
+    "cardigan",
+    0.4,
+    0.17,
+    "folklore"
+  ],
+  [
+    "the last great american dynasty",
+    0.35,
+    0.15,
+    "folklore"
+  ],
+  [
+    "exile",
+    0.05,
+    0.03,
+    "folklore"
+  ],
+  [
+    "my tears ricochet",
+    0.45,
+    0.09,
+    "folklore"
+  ],
+  [
+    "mirrorball",
+    0.33,
+    0.22,
+    "folklore"
+  ],
+  [
+    "seven",
+    0.19,
+    0.35,
+    "folklore"
+  ],
+  [
+    "august",
+    0.15,
+    0.06,
+    "folklore"
+  ],
+  [
+    "this is me trying",
+    0.29,
+    0.05,
+    "folklore"
+  ],
+  [
+    "illicit affairs",
+    0.35,
+    0.13,
+    "folklore"
+  ],
+  [
+    "invisible string",
+    0.25,
+    0.17,
+    "folklore"
+  ],
+  [
+    "mad woman",
+    0.2,
+    0.05,
+    "folklore"
+  ],
+  [
+    "epiphany",
+    0.08,
+    0.0,
+    "folklore"
+  ],
+  [
+    "betty",
+    0.4,
+    0.21,
+    "folklore"
+  ],
+  [
+    "peace",
+    0.19,
+    0.14,
+    "folklore"
+  ],
+  [
+    "hoax",
+    0.43,
+    0.07,
+    "folklore"
+  ],
+  [
+    "the lakes",
+    0.23,
+    0.16,
+    "folklore"
+  ],
+  ["willow",
+    0.56,
+    0.02, "evermore"
+  ],
+  ["champagne problems",
+    0.37,
+    0.13, "evermore"
+  ],
+  ["gold rush",
+    0.16,
+    0.19, "evermore"
+  ],
+  ["’tis the damn season",
+    0.39,
+    0.18, "evermore"
+  ],
+  ["tolerate it",
+    0.2,
+    0.2, "evermore"
+  ],
+  ["no body, no crime",
+    0.24,
+    0.16, "evermore"
+  ],
+  ["happiness",
+    0.2,
+    0.31, "evermore"
+  ],
+  ["dorothea",
+    0.19,
+    0.04, "evermore"
+  ],
+  ["coney island",
+    0.35,
+    0.19, "evermore"
+  ],
+  ["ivy",
+    0.28,
+    0.13, "evermore"
+  ],
+  ["cowboy like me",
+    0.18,
+    0.22, "evermore"
+  ],
+  ["long story short",
+    0.17,
+    0.05, "evermore"
+  ],
+  ["marjorie",
+    0.18,
+    0.07, "evermore"
+  ],
+  ["closure",
+    0.18,
+    0.23, "evermore"
+  ],
+  ["evermore",
+    0.27,
+    0.14, "evermore"
+  ],
+  ["right where you left me",
+    0.26,
+    0.13, "evermore"
+  ],
+  ["it’s time to go",
+    0.19,
+    0.12, "evermore"
+  ]
+]

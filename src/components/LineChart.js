@@ -75,6 +75,8 @@ const LineChart = () => {
     setAlbum(event.target.value);
   };
 
+  
+
   return (
     <div style={{minWidth: "300px"}}>
       <Box display='flex' justifyContent='center'>

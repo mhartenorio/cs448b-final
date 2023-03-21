@@ -45,7 +45,10 @@ const LexicalDiversity = () => {
     evermoreData
   ]
   const options = {
-    vAxis: { title: "Value" },
+    vAxis: { title: "Value", viewWindow: {
+      min: 0, 
+      // max: 0.9
+  }, },
     hAxis: { title: "Album" },
     seriesType: "LineChart",
     series: { 3: { type: "bars" }, 4: { type: "bars" } },
