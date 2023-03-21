@@ -15,8 +15,10 @@ import lover from '../data/07-lover.csv';
 import folklore from '../data/08-folklore.csv';
 import evermore from '../data/09-evermore.csv';
 
+import default_data from '../data/word-freq-default.json';
 
-let words = []
+
+let words = ["you",  "he",  "she",  "they"]
 function WordFrequencyV2() {
   const [loading, setLoading] = useState(true);
   // const [words, setWords] = useState([]);
@@ -35,18 +37,19 @@ function WordFrequencyV2() {
     "folklore": [],
     "evermore": []
   })
-  const [data, setData] = useState([
-    ["Album", "Word Frequency"],
-    ["Taylor Swift", 0],
-    ["Fearless", 0],
-    ["Speak Now", 0],
-    ["Red", 0],
-    ["1989", 0],
-    ["reputation", 0],
-    ["lover", 0],
-    ["folklore", 0],
-    ["evermore", 0],
-  ]);
+  // const [data, setData] = useState([
+  //   ["Album", "Word Frequency"],
+  //   ["Taylor Swift", 0],
+  //   ["Fearless", 0],
+  //   ["Speak Now", 0],
+  //   ["Red", 0],
+  //   ["1989", 0],
+  //   ["reputation", 0],
+  //   ["lover", 0],
+  //   ["folklore", 0],
+  //   ["evermore", 0],
+  // ]);
+  const [data, setData] = useState(default_data);
   const [phrases, setPhrases] = useState([["Phrases"]])
 
   const [lyricRes, setLyricsRes] = useState([]);
@@ -59,7 +62,7 @@ function WordFrequencyV2() {
 
   const options = {
     // chartArea: { width: "50%", 'height': '90%' },
-    
+
     hAxis: {
       title: "Word Frequency",
       minValue: 0,
@@ -67,6 +70,7 @@ function WordFrequencyV2() {
     vAxis: {
       title: "Album",
     },
+    chartArea: { 'top': '4%', 'bottom': '10%', }
   };
 
   useEffect(() => {
@@ -248,14 +252,14 @@ function WordFrequencyV2() {
             ["lover", 0],
             ["folklore", 0],
             ["evermore", 0],]);
-          words = []
+          words = [];
         }}>
           Reset
         </Button>
         <Chart
           chartType="BarChart"
           width="100%"
-          height="620px"
+          height="720px"
           data={data}
           options={options}
         />

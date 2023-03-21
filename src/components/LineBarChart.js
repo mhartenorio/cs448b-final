@@ -52,7 +52,7 @@ const LineBarChart = () => {
     colors: ['#3366CC', '#FF9900', '#990099', 'lightgray', 'darkgray'],
     lineWidth: 5,
     // chartArea: {'height': '75%'},
-    chartArea: {'top': '4%', 'bottom': '20%'}
+    chartArea: {'top': '4%', 'bottom': '20%', }
   };
 
   return (
