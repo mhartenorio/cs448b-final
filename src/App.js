@@ -10,6 +10,7 @@ import WordTree from './components/WordTree';
 import LexicalDiversity from './components/LexicalDiversity';
 import LexicalDiversityV2 from './components/LexicalDiversityV2';
 import SentimentAnalysis from './components/SentimentAnalysis';
+import SentimentAnalysisPT2 from './components/SentimentAnalysisPT2';
 
 const data = [
   { album: "Taylor Swift", critic_score: 67 },
@@ -50,6 +51,12 @@ function App() {
         <Typography textAlign='center'>Description</Typography>
         <br />
         <SentimentAnalysis />
+      </Container>
+      <Container maxWidth='md' sx={{ padding: "36px" }}>
+        <Typography textAlign='center'>Title of Graph</Typography>
+        <Typography textAlign='center'>Description</Typography>
+        <br />
+        <SentimentAnalysisPT2 />
       </Container>
       <Container maxWidth='md'>
         <Typography variant="h4">Part III: Lexical Analysis</Typography>

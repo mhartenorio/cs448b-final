@@ -47,7 +47,7 @@ const LexicalDiversity = () => {
   const options = {
     vAxis: { title: "Value", viewWindow: {
       min: 0, 
-      // max: 0.9
+      max: 0.55
   }, },
     hAxis: { title: "Album" },
     seriesType: "LineChart",
