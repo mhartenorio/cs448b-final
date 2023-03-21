@@ -52,12 +52,12 @@ function App() {
         <br />
         <SentimentAnalysis />
       </Container>
-      <Container maxWidth='md' sx={{ padding: "36px" }}>
+      {/* <Container maxWidth='md' sx={{ padding: "36px" }}>
         <Typography textAlign='center'>Title of Graph</Typography>
         <Typography textAlign='center'>Description</Typography>
         <br />
         <SentimentAnalysisPT2 />
-      </Container>
+      </Container> */}
       <Container maxWidth='md'>
         <Typography variant="h4">Part III: Lexical Analysis</Typography>
       </Container>
@@ -65,8 +65,8 @@ function App() {
         <Typography textAlign='center'>Lexical Diversity</Typography>
         <Typography textAlign='center'>The ratio of number of unique words to the total number of words</Typography>
         <br />
-        <LexicalDiversity/>
-        {/* <LexicalDiversityV2/> */}
+        {/* <LexicalDiversity/> */}
+        <LexicalDiversityV2/>
       </Container>
       <Container maxWidth='md' sx={{ padding: "36px" }}>
         <Typography textAlign='center'>Word Appearances per Album</Typography>

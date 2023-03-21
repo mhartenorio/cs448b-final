@@ -216,7 +216,7 @@ function WordTree() {
           data={phrases}
           options={options_wordtree}
         />
-        {console.log(phrases)}
+        {/* {console.log(phrases)} */}
         </div>
         {/* </Grid> */}
       </Grid>

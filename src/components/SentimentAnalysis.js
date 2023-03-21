@@ -3,8 +3,9 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import * as d3 from 'd3';
 import { Chart, ReactGoogleChartEvent } from 'react-google-charts';
-import { FormControl, FormControlLabel, Radio, RadioGroup, FormLabel, Box } from '@mui/material';
+import { FormControl, FormControlLabel, Radio, RadioGroup, FormLabel, Box, Typography } from '@mui/material';
 import sentimentTracks from '../data/sentiment-tracks.json';
+import sentimentTracks2 from '../data/sentiment-tracks-genre.json';
 
 // console.log(sentimentTracks)
 
@@ -23,8 +24,8 @@ const SentimentAnalysis = () => {
     ['1989', 0.18250000000000002, 0.248125, "Pop"],
     ['Reputation', 0.14266666666666666, 0.3233333333333333, "Pop"],
     ['Lover', 0.20166666666666666, 0.32666666666666666, "Pop"],
-    ['folklore', 0.13176470588235292, 0.26470588235294124, "Alt-pop"],
-    ['evermore', 0.14764705882352944, 0.25705882352941184, "Alt-pop"]
+    ['folklore', 0.13176470588235292, 0.26470588235294124, "Alternative"],
+    ['evermore', 0.14764705882352944, 0.25705882352941184, "Alternative"]
   ]
   // const data = [['Album', 'Overall Sad', 'Overall Happy'], ['Taylor Swift', 0.36, 0.19], ['Fearless (Taylor’s Version)', 0.29, 0.18], ['Speak Now (Deluxe)', 0.25, 0.15], ['Red (Deluxe Edition)', 0.33, 0.15], ['1989 (Deluxe)', 0.26, 0.19], ['reputation', 0.35, 0.13], ['Lover', 0.34, 0.2], ['folklore (deluxe version)', 0.26, 0.12], ['evermore (deluxe version)', 0.26, 0.15]]
   const handleSwitch = (arr) => {
@@ -77,7 +78,7 @@ const SentimentAnalysis = () => {
   };
 
   const [choice, setChoice] = React.useState('album');
-  const [tracks, setTracks] = React.useState(null)
+  const [tracks, setTracks] = React.useState('genre')
 
   return (
     <div>
@@ -108,15 +109,35 @@ const SentimentAnalysis = () => {
         />
       }
       {choice === 'track' &&
-        <Chart
+      <>        
+      <br/>
+      <Typography textAlign='center'>Categorize tracks by:</Typography>
+      <Box display='flex' justifyContent='center'>
+        <FormControl>
+          {/* <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel> */}
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+            value={tracks}
+            onChange={(e) => setTracks(e.target.value)}
+          >
+            <FormControlLabel value="genre" control={<Radio />} label="By genre" />
+            <FormControlLabel value="album" control={<Radio />} label="By album" />
+          </RadioGroup>
+        </FormControl>
+      </Box>
+      <Chart
           chartType="BubbleChart"
-          data={sentimentTracks}
+          data={tracks === 'genre' ? sentimentTracks2 : sentimentTracks}
           options={options}
           width="100%"
           height="1000px"
         //legendToggle
         //chartEvents={chartEvents}
-        />}
+        />
+        </>
+}
     </div>
   )
 }
