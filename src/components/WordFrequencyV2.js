@@ -233,7 +233,7 @@ function WordFrequencyV2() {
         <TextField size='small' sx={{ marginRight: "16px", marginLeft: "16px" }} onChange={(e) => { setWord1(e.target.value); }}></TextField>
         <Button variant="contained" sx={{ marginRight: "16px" }} onClick={() => {
           // setWords([word1]);
-          words.push(word1);
+          words.push(word1.toLowerCase());
           setPhrases([["Phrases"]]);
           handleLyricSubmit(word1, setData)
         }}>

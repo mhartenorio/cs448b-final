@@ -181,7 +181,7 @@ function WordTree() {
   const options_wordtree = {
     wordtree: {
       format: "implicit",
-      type: "double",
+      // type: "double",
       word: word2,
     },
   };

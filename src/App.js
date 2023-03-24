@@ -11,7 +11,8 @@ import LexicalDiversity from './components/LexicalDiversity';
 import LexicalDiversityV2 from './components/LexicalDiversityV2';
 import SentimentAnalysis from './components/SentimentAnalysis';
 import SentimentAnalysisPT2 from './components/SentimentAnalysisPT2';
-import text from './data/text.json'
+import text from './data/text.json';
+import banner from './banner.jpg';
 
 const data = [
   { album: "Taylor Swift", critic_score: 67 },
@@ -29,6 +30,12 @@ const data = [
 function App() {
   return (
     <div style={{ marginTop: "36px" }}>
+      <div style={{ width: "100%" }}>
+        <img src={banner} style={{ maxHeight: "70vh", width: "100%", objectFit: "scale-down" }}></img>
+      </div>
+      <Container maxWidth='md'>
+        <Typography variant="caption" >Image credit: <a href="https://www.ticketmaster.com/taylor-swift-tickets/artist/1094215" target='_blank' style={{ color: "black" }}>Taylor Swift for The Eras Tour</a></Typography>
+      </Container>
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
         <Typography variant="h3"><b>Data Visualization (Taylor’s Version)</b></Typography>
         <Typography variant="h4"><>Analyzing Taylor Swift’s music over time through data</></Typography>
@@ -39,6 +46,7 @@ function App() {
         <br />
         <Typography>{text[2]}</Typography>
       </Container>
+
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
         <Typography variant="h4">Part I: Audio Analysis</Typography>
         <br />
@@ -73,29 +81,52 @@ function App() {
       </Container>
       <Container maxWidth='md'>
         <Typography variant="h4" sx={{ paddingTop: "36px" }}>Part II: Lexical Analysis</Typography>
+        <br />
+        <Typography>Yet it is also important to note that an audio analysis is limiting in exploring her musical choices over time. Swift, regarded as one of the most prolific songwriters of our generation, such as making it to Rolling Stone’s 100 Greatest Songwriters of All Time list, has an extensive number of penned songs. In this section, we will move to exploring her lyrical content.</Typography>
+        <br />
+        <Typography>To conduct this analysis, we will use this <a href='https://www.kaggle.com/datasets/thespacefreak/taylor-swift-song-lyrics-all-albums' target='_blank'>dataset</a> that contains a line-by-line breakdown of each lyric from all her songs. It is important to note that this dataset does not contain lyrics from her latest 2022 release Midnights, and therefore our analysis can be expanded in the future. We will use a porter stemmer algorithm to match words to their corresponding root.</Typography>
       </Container>
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
-        <Typography textAlign='center'>Lexical Diversity</Typography>
+        <Typography textAlign='center' variant="h6" sx={{ fontWeight: 'bold' }}>Lexical Diversity</Typography>
         <Typography textAlign='center'>The ratio of number of unique words to the total number of words</Typography>
         <br />
         {/* <LexicalDiversity/> */}
         <LexicalDiversityV2 />
+        <Typography>For our first visualization, we will explore the lexical diversity of her songs. Lexical diversity refers to the ratio of the number of unique words to the total number of words in a piece of text. Besides calculating the lexical diversity for each song, we will also look at the average lexical diversity for each album. To interact with the visualization, you can pick whether to see album averages or track-by-track values per album using the dropdown menu above.</Typography>
+        <br />
+        <Typography>Immediately, we see that her lexical diversity dropped a noticeable amount during her switch from country to pop. However, after she switched to a more alternative genre, we see a significant rise and a new peak in lexical diversity, topping those of her earlier country albums. It is also interesting to note how the highest lexical diversity is also , as we have seen in Part I.</Typography>
+        <br />
+        <Typography>This is interesting to see in conjunction with our findings from Part I. As Swift describes the pandemic as a period of musical exploration, we see that not only in the shift of sound, but also in a shift in writing style. Perhaps, this new genre or period of her music during the pandemic has allowed her to explore more complex or more detailed song-writing. It is also significant to note that the peaks of lexical diversity also reflect peaks of critic scores, as we've seen in Part I.</Typography>
+        <br />
+        <Typography>Looking in-depth for the lexical diversity for each track for each album, we also see a pattern similar to our observations in Part I, where lexical diversity peaks at different points of each album, instead of following a more linear pattern. Here, we further establish how her albums are structured, opting for a more dynamic, non-linear approach, both sonically and lyrically throughout the run of each album.</Typography>
       </Container>
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
-        <Typography textAlign='center'>Word Appearances per Album</Typography>
+        <Typography textAlign='center' variant="h6" sx={{ fontWeight: 'bold' }}>Word Appearances per Album</Typography>
         <Typography textAlign='center'>Number of times the word appears in each album</Typography>
         <br />
         <WordFrequencyV2 />
+        <br />
+        <Typography>Next, we will use changes of word frequencies over her repertoire. To do this, we will use the same dataset as above and use regular expressions to count the number of matches per line for each song per album. Each bar represents the number of times the word appears in the album. To interact with the visualization, everytime you type in a word and hit ‘Search’, it will add values to the existing graph, allowing you to compare multiple words each time. If you want to clear the graph, you can press ‘Reset’.</Typography>
+        <br />
+        <Typography>In the example above, we can see a comparison between her use of pronouns in her songwriting. We can see a significant difference between the use of ‘you’ compared to the other pronouns. This observation gives us an insight into Swift’s writing style. We can see that she frequently directly addresses someone in her songs, which might mean she treats songwriting as if it was writing a letter to someone. Perhaps, this style of writing is what lets her listeners become engaged and popular, given that the use of the first-person narrative might make it easier for listeners to relate to her.</Typography>
+        <br />
+        <Typography>Another interesting point of investigation is her change in word choice over time, as she changed genres of music. For example, according to this other <a href='https://gradywsmith.com/2020/09/21/these-are-the-5-most-common-lyrics-in-country-music/' target='_blank'>data exploration project</a>, one of the most used words in country music is the word ‘Little’. We can use our visualization to check how frequently Swift used this word, along with other words such as ‘Beautiful’, over time. To search this, we can clear the graph by clicking ‘Reset’, and then type the word ‘little’, hit search, then type ‘beautiful’, and hit search again. By doing so, we will see that these words appeared more on her earlier, country albums, and decreased in frequency as she made the shift in genre. This shows that her shift in genre has affected her word choice in songwriting.</Typography>
       </Container>
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
-        <Typography textAlign='center'>Word Tree</Typography>
-        <Typography textAlign='center'>How does Taylor Swift write about love?</Typography>
+        <Typography textAlign='center' variant="h6" sx={{ fontWeight: 'bold' }}>Word Tree</Typography>
+        <Typography textAlign='center'>What usually follows a certain word?</Typography>
         <br />
         <WordTree />
+        <br />
+        <Typography>Lastly, we will try to analyze themes and word choices in her work through a word tree. Whenever you search a word, it will get all the lines from all her songs that contain the word and create an interactive tree with branches that shows you which words follow this given word the most. You can click each branch as a point of exploration. </Typography>
+        <br />
+        <Typography>Known as a prolific writer of love songs, I was curious about how Taylor Swift wrote above love in her song. To do this, we will look at the word tree with ‘Love’ as the point of connection between the branches. If we click the ‘is’ branch, we will see that she describes love as “bad”, “a ruthless game”, “a secret I’m… dying to keep”, “boxing with no gloves', to name a few. Here, we can see a common theme in love as a struggle and something that is not easily gained.</Typography>
+        <br />
+        <Typography>Another path of investigation is how Swift writes about herself. If we type in ‘im’ to our word tree and then click the ‘a’ branch, we see that some of the ways she describes herself are: “nightmare”, “house of cards”, “crumpled up piece of paper”, “mess”, etc. Here, we can see how she uses songwriting to express feelings of insecurity and vulnerability. This use of first-person perspective to describe vulnerability might be a way of connection for her listeners, allowing them to insert themselves in Swift’s position, making her music more relatable.</Typography>
       </Container>
       <Container maxWidth='md' sx={{ paddingTop: "36px" }}>
         <Typography variant="h4">Part III: Sentiment Analysis</Typography>
-        <br/>
+        <br />
         <Typography>Using the same dataset from the part above, we will now aim to conduct a sentiment analysis of her songwriting.</Typography>
         <br />
         <Typography>We will use a Python sentiment analysis classifier, <a href='https://pypi.org/project/text2emotion/' target='_blank'> text2emotion</a>, to return a value for how sad or happy each lyric is. To get the value for a song, we will average these values for all of its lyrics, and for each album average these values for each song. </Typography>
@@ -106,7 +137,7 @@ function App() {
         <br />
         <SentimentAnalysis />
         <Typography>Almost immediately, we notice that her country albums tend to, on average, contain sadder lyrics, while her pop albums are among the happiest, on average. Meanwhile, her alternative albums seem to contain, on average, the least happiest lyrics.</Typography>
-        <br/>
+        <br />
         <Typography>If we expand our analysis to a track-by-track visualization, we notice that her country songs tend to be on the sadder side, while country and pop tend to be on the happier side. In line with our previous observation, lyrics from her alternative albums tend to be in the middle ground, though a lot are in the lower side of the happy scale.</Typography>
       </Container>
       {/* <Container maxWidth='md' sx={{ padding: "36px" }}>
@@ -115,7 +146,11 @@ function App() {
         <br />
         <SentimentAnalysisPT2 />
       </Container> */}
-
+      <Container maxWidth='md' sx={{ paddingTop: "36px" }}>
+        <Typography variant="h4">Final Thoughts</Typography>
+        <br />
+        <Typography>TEXT</Typography>
+      </Container>
       <Container maxWidth='md' sx={{ paddingTop: "36px", paddingBottom: "24px" }}>
         <Typography variant="h4">References</Typography>
         <Typography>
