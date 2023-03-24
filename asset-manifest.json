@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/cs448b-final/static/css/main.8e8c649d.css",
+    "main.js": "/cs448b-final/static/js/main.47db5568.js",
+    "static/js/787.6f26646d.chunk.js": "/cs448b-final/static/js/787.6f26646d.chunk.js",
+    "static/media/banner.jpg": "/cs448b-final/static/media/banner.4bc24f7f83f4bebe8be0.jpg",
+    "static/media/02-fearless.csv": "/cs448b-final/static/media/02-fearless.32994ea11e554c6f8740.csv",
+    "static/media/04-red.csv": "/cs448b-final/static/media/04-red.620b04c92993d30d538e.csv",
+    "static/media/09-evermore.csv": "/cs448b-final/static/media/09-evermore.0af774346d38b2f5c838.csv",
+    "static/media/05-1989.csv": "/cs448b-final/static/media/05-1989.68579903b5e9e6752288.csv",
+    "static/media/06-reputation.csv": "/cs448b-final/static/media/06-reputation.44926656a31342587ff8.csv",
+    "static/media/03-speak_now.csv": "/cs448b-final/static/media/03-speak_now.45c68a827cb69ae8cf32.csv",
+    "static/media/07-lover.csv": "/cs448b-final/static/media/07-lover.7f9aef3808e08334beab.csv",
+    "static/media/08-folklore.csv": "/cs448b-final/static/media/08-folklore.099824690809b112fc46.csv",
+    "static/media/01-taylor_swift.csv": "/cs448b-final/static/media/01-taylor_swift.a413c3336008674d49fe.csv",
+    "index.html": "/cs448b-final/index.html",
+    "main.8e8c649d.css.map": "/cs448b-final/static/css/main.8e8c649d.css.map",
+    "main.47db5568.js.map": "/cs448b-final/static/js/main.47db5568.js.map",
+    "787.6f26646d.chunk.js.map": "/cs448b-final/static/js/787.6f26646d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e8c649d.css",
+    "static/js/main.47db5568.js"
+  ]
+}
