@@ -155,10 +155,10 @@ function App() {
         <Typography variant="h4">References</Typography>
         <Typography>
           <ul>
-            <li><a href="https://www.react-google-charts.com" target="_blank">React Google Charts documentation </a></li>
             <li><a href="https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset?select=taylor_swift_spotify.csv" target="_blank">Taylor Swift Spotify Dataset, Jarred Priester</a></li>
             <li><a href="https://www.kaggle.com/datasets/thespacefreak/taylor-swift-song-lyrics-all-albums" target="_blank">Taylor Swift Song Lyrics Dataset, Jan Llenzl Dagohoy </a></li>
             <li><a href="https://www.metacritic.com/person/taylor-swift?filter-options=music&sort_options=metascore&num_items=30" target="_blank">Taylor Swift Metacritic Music Profile </a></li>
+            <li><a href="https://www.react-google-charts.com" target="_blank">React Google Charts documentation </a></li>
             <li><a href="https://pypi.org/project/text2emotion/" target="_blank">text2emotion Python library</a></li>
           </ul>
         </Typography>
