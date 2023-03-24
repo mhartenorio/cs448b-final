@@ -15,7 +15,7 @@ import lover from '../data/07-lover.csv';
 import folklore from '../data/08-folklore.csv';
 import evermore from '../data/09-evermore.csv';
 
-import default_data from '../data/word-freq-default.json';
+import default_data from '../data/word-freq-default2.json';
 
 
 let words = ["you",  "he",  "she",  "they"]

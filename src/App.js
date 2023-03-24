@@ -149,20 +149,32 @@ function App() {
       <Container maxWidth='md' sx={{ paddingTop: "36px" }}>
         <Typography variant="h4">Final Thoughts</Typography>
         <br />
-        <Typography>TEXT</Typography>
-      </Container>
-      <Container maxWidth='md' sx={{ paddingTop: "36px", paddingBottom: "24px" }}>
-        <Typography variant="h4">References</Typography>
-        <Typography>
-          <ul>
-            <li><a href="https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset?select=taylor_swift_spotify.csv" target="_blank">Taylor Swift Spotify Dataset, Jarred Priester</a></li>
-            <li><a href="https://www.kaggle.com/datasets/thespacefreak/taylor-swift-song-lyrics-all-albums" target="_blank">Taylor Swift Song Lyrics Dataset, Jan Llenzl Dagohoy </a></li>
-            <li><a href="https://www.metacritic.com/person/taylor-swift?filter-options=music&sort_options=metascore&num_items=30" target="_blank">Taylor Swift Metacritic Music Profile </a></li>
-            <li><a href="https://www.react-google-charts.com" target="_blank">React Google Charts documentation </a></li>
-            <li><a href="https://pypi.org/project/text2emotion/" target="_blank">text2emotion Python library</a></li>
-          </ul>
-        </Typography>
+        <Typography>As we can see from our visualizations, Swift’s music, both in sound and in writing, have changed over time. We see her leaning towards a more acoustic, lower energy sound, while highlighting richer and more diverse lyrical songwriting. Though there are some writing techniques, such as the use of first-person narrative and the direct use of second-person pronouns, that remain throughout her career, we see how genre shifts have also impacted her approach to lyrical content. Lastly, we also see some common themes in her work, such as her views about love and of herself.</Typography>
         <br />
+        <Typography>As a Swift fan myself since her country days, this project has been fun to explore how her musical artistry has changed in the span of her career. It was fascinating to see how genre changes have affected her music and to analyze how personal events in her life have affected each album. I hope that other Swift listeners will be able to get this same fascination with these visualizations.</Typography>
+        <br />
+        <Typography>Though even for non-fans, it can be interesting to see how she has managed to adapt her music to market changes over time. And for those interested in songwriting, it might be intriguing to explore her approaches in songwriting, and how she explores themes in her songs or how she uses songwriting as a way to connect to listeners. I hope that the added interactivity allows readers to explore these questions themselves regarding her music. Enjoy! </Typography>
+      </Container>
+      <Container maxWidth='md' sx={{ paddingTop: "36px", paddingBottom: "36px" }}>
+        <Typography variant="h4">Documentation</Typography>
+        <ul>
+          <li><a href="https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset?select=taylor_swift_spotify.csv" target="_blank">Taylor Swift Spotify Dataset, Jarred Priester</a></li>
+          <li><a href="https://www.kaggle.com/datasets/thespacefreak/taylor-swift-song-lyrics-all-albums" target="_blank">Taylor Swift Song Lyrics Dataset, Jan Llenzl Dagohoy </a></li>
+          <li><a href="https://www.metacritic.com/person/taylor-swift?filter-options=music&sort_options=metascore&num_items=30" target="_blank">Taylor Swift Metacritic Music Profile </a></li>
+          <li><a href="https://www.react-google-charts.com" target="_blank">React Google Charts documentation </a></li>
+          <li><a href="https://pypi.org/project/text2emotion/" target="_blank">text2emotion Python library</a></li>
+          <li><a href="https://www.nltk.org/howto/stem.html" target="_blank">NLTK's Porter Stemmer</a></li>
+        </ul>
+        <br />
+        <Typography>To make the visualizations, I used a React library of Google Charts. </Typography>
+        <br/>
+        <Typography>For the sake of simplicity, I decided to use her non-rerecorded albums. This is so that changes in production style or lyrical content of “From the Vault” songs don’t influence our data, as these songs may have some influence from Swift’s more recent styles at the time of the rerecording.</Typography>
+        <br/>
+        <Typography>For Part I, I used the “Taylor Swift Spotify Dataset”, which uses data aggregated from Spotify’s API. Spotify gives each track from each album numerical values for each feature. Out of the 10 audio features, we investigate five of them: acousticness, danceability, energy, valence (how positive or negative the song sounds), and loudness. For loudness, we will use a relative value and compare each album’s loudness to the least loud album.</Typography>
+        <br/>
+        <Typography>For Part II, we used the “Taylor Swift Song Lyric Dataset”. I cleaned up the dataset by removing rerecorded songs and songs that were not part of the original release of the album. I used Python to process and clean (such as porter stemming – so that root words match their different forms, dealing with quotation marks and extra punctuation) lyrics, line-by-line, and to organize them by song and by album and to process lexical diversity. To calculate each song’s lexical diversity, I used Python to count the number of unique words per song and to count the total number of words each song has. For album values, I used an average metric of the lexical diversity of all songs in that album. Lastly, for word frequencies, I used regular expressions to find an exact match of a word in a lyric and prevent substring matches.</Typography>
+        <br/>
+        <Typography>For Part III, I again used the same dataset from above. I used Python to do the same processing and cleaning of each lyric as Part II. I used a Python sentiment analysis classifier, text2emotion, to return a value for how sad or happy each lyric is. To calculate each song’s sentiment, I combined the lyrics of each song from its line-by-line breakdown and used the text2emotion library to return these sentiment values. To calculate album values, I averaged the values of the sentiments for each song in that album. </Typography>
       </Container>
     </div>
   );
