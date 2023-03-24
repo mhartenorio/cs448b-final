@@ -23,7 +23,7 @@ const LexicalDiversityV2 = () => {
   const all_bubble_data = [
     [
       "Album",
-      "Number",
+      "Album Number",
       "Average Lexical Diversity",
       "Genre"
     ],
