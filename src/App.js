@@ -156,7 +156,7 @@ function App() {
         <Typography>Though even for non-fans, it can be interesting to see how she has managed to adapt her music to market changes over time. And for those interested in songwriting, it might be intriguing to explore her approaches in songwriting, and how she explores themes in her songs or how she uses songwriting as a way to connect to listeners. I hope that the added interactivity allows readers to explore these questions themselves regarding her music. Enjoy! </Typography>
       </Container>
       <Container maxWidth='md' sx={{ paddingTop: "36px", paddingBottom: "36px" }}>
-        <Typography variant="h4">Documentation</Typography>
+        <Typography variant="h4">Data and Methods</Typography>
         <ul>
           <li><a href="https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset?select=taylor_swift_spotify.csv" target="_blank">Taylor Swift Spotify Dataset, Jarred Priester</a></li>
           <li><a href="https://www.kaggle.com/datasets/thespacefreak/taylor-swift-song-lyrics-all-albums" target="_blank">Taylor Swift Song Lyrics Dataset, Jan Llenzl Dagohoy </a></li>
