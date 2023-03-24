@@ -165,7 +165,7 @@ function App() {
           <li><a href="https://pypi.org/project/text2emotion/" target="_blank">text2emotion Python library</a></li>
           <li><a href="https://www.nltk.org/howto/stem.html" target="_blank">NLTK's Porter Stemmer</a></li>
         </ul>
-        <br />
+        {/* <br /> */}
         <Typography>To make the visualizations, I used a React library of Google Charts. </Typography>
         <br/>
         <Typography>For the sake of simplicity, I decided to use her non-rerecorded albums. This is so that changes in production style or lyrical content of “From the Vault” songs don’t influence our data, as these songs may have some influence from Swift’s more recent styles at the time of the rerecording.</Typography>
