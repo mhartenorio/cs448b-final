@@ -50,7 +50,7 @@ function App() {
       <Container maxWidth='md' sx={{ padding: "36px 36px 0px 36px" }}>
         <Typography variant="h4">Part I: Audio Analysis</Typography>
         <br />
-        <Typography>{text[3]}</Typography>
+        <Typography>First, we will start with an audio analysis of her work. We will use this <a href="https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset?select=taylor_swift_spotify.csv" target="_blank">Taylor Swift Spotify Dataset</a> that uses Spotify API to gather a numerical value for each audio feature for each track. From ten audio features, we will isolate and explore five categories. We will explore each song’s acousticness, danceability, energy, valence (how positive or negative the song sounds), and loudness. To explore loudness, we will compare each album with a baseline of the least loud album. To gather values for each album, we will get each audio feature from each track and average them out per album.</Typography>
         <br />
         <Typography>{text[4]}</Typography>
       </Container>
